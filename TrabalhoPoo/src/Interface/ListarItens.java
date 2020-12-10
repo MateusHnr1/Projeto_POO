@@ -7,6 +7,7 @@ package Interface;
 
 import trabalhopoo.Desodorante;
 import trabalhopoo.Item;
+import trabalhopoo.Pilha;
 
 /**
  *
@@ -33,6 +34,15 @@ public class ListarItens extends javax.swing.JFrame {
                         ", "+d.getPeso()+
                         ", "+d.getPreco()+
                         ", "+d.getValidade()+"\n";
+            }
+             if(i.getClass().getTypeName().equalsIgnoreCase("trabalhopoo.Pilha")){
+                System.out.println("entrou");
+                Pilha d = (Pilha)i;
+                texto+=""+d.getMarca()+
+                        ", "+d.getTipo()+
+                        ", "+d.getId()+
+                        ", "+d.getPeso()+
+                        ", "+d.getPreco()+"\n";
             }
             jTextArea1.setText(texto);
         }
