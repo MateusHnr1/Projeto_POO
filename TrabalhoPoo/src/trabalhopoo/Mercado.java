@@ -85,4 +85,7 @@ public class Mercado {
         }
          return null;
     }
+    public LinkedList<Prateleira> getPrateleiras(){
+        return pratileiras;
+    }
 }
