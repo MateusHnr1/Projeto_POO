@@ -163,7 +163,7 @@ public class CadastrarItemDesodorante extends javax.swing.JFrame {
                 Double.parseDouble(jTextField8.getText()),
                 JanelaMain.MERCADINHO.getItens().size()));
             this.setVisible(false);
-        } catch (java.lang.NumberFormatException e) {
+        } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Erro de conversão", "ERRO MEU CHAPA!", JOptionPane.WARNING_MESSAGE);
             System.out.println("Erro");
         }
