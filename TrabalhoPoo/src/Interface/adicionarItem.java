@@ -16,7 +16,7 @@ public class adicionarItem extends javax.swing.JFrame {
      */
     public adicionarItem() {
         initComponents();
-        jTextArea1.setText("Tipos permitodos:\n desodorante\n");
+        jTextArea1.setText("Tipos permitodos:\n desodorante\npilha\n");
     }
 
     /**
@@ -89,7 +89,10 @@ public class adicionarItem extends javax.swing.JFrame {
             CadastrarItemDesodorante desoj = new CadastrarItemDesodorante();
             desoj.setVisible(true);
             desoj.show();
-        } 
+        }else if(jTextField1.getText().equalsIgnoreCase("pilha")) {
+            CadastrarItemPilha pilhJ = new CadastrarItemPilha();
+            pilhJ.setVisible(true);
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
