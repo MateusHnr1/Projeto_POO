@@ -14,9 +14,11 @@ import java.util.LinkedList;
 public class Prateleira  {
     private LinkedList<Item> itens;
     private int id;
+    public static int counter=0;
 
     public Prateleira(int id) {
-        this.id = id;
+        this.id = counter;
+        counter++;
         itens = new LinkedList<>();
     }
     /**

@@ -5,6 +5,8 @@
  */
 package Interface;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import trabalhopoo.Prateleira;
 
 /**
@@ -12,7 +14,7 @@ import trabalhopoo.Prateleira;
  * @author host
  */
 public class APratileira extends javax.swing.JFrame {
-    private String text="";
+    private String texto=" ";
     /**
      * Creates new form APratileira
      */
@@ -47,6 +49,11 @@ public class APratileira extends javax.swing.JFrame {
         });
 
         jButton2.setText("Remover");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("Colocaritens");
 
@@ -95,11 +102,27 @@ public class APratileira extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    private void UpdateList() {
+        texto="";
+        for(int i=0;i<JanelaMain.MERCADINHO.getPrateleiras().size();i++){
+            texto+=" "+JanelaMain.MERCADINHO.getPrateleiras().get(i).getId()+"\n";
+        }
+        jTextArea1.setText(texto);
+    }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         JanelaMain.MERCADINHO.addPrateleira(new Prateleira(JanelaMain.MERCADINHO.getPrateleiras().size()));
         
+        UpdateList();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        RemoverPrateleira r=new RemoverPrateleira();
+        r.setVisible(true);
+        
+        texto=" ";
+        System.out.println(JanelaMain.MERCADINHO.getPrateleiras().size());
+        UpdateList();
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments

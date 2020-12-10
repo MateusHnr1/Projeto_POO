@@ -14,6 +14,7 @@ public class Item implements BasicI{
     private String marca;
     private double peso;
     private int id;
+    public static int counter=0;
     /**
      * Metodo construtor da classe
      * @param preco
@@ -24,7 +25,8 @@ public class Item implements BasicI{
         this.preco = preco;
         this.marca = marca;
         this.peso = peso;
-        this.id=id;
+        this.id=counter;
+        counter++;
     }
     
     /**
