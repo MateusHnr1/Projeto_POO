@@ -14,12 +14,10 @@ import java.util.LinkedList;
 public class Mercado {
     private LinkedList<Prateleira> pratileiras;
     private LinkedList<Item> itens;
-    private LinkedList<Carrinho> carrinhos;
 
     public Mercado() {
         pratileiras = new LinkedList<>();
         itens= new LinkedList<>();
-        carrinhos= new LinkedList<>();
     }
     
 /**
@@ -86,39 +84,5 @@ public class Mercado {
             }
         }
          return null;
-    }
-    /**
-     * adiciona 1 carrinho ao mercado
-     * @param c 
-     */
-    public void addCarrinho(Carrinho c){
-        carrinhos.add(c);
-    }
-    /**
-     * remove o carrinho do Mercado
-     * @param c 
-     */
-    public void delCarrinho(Carrinho c){
-        carrinhos.remove(c);
-    }
-    public void delCarrinho(int id){
-         for(Carrinho c:carrinhos){
-            if(c.getId()==id){
-                carrinhos.remove(c);
-            }
-        }
-    }
-    /**
-     * retorna o carrinho procurado
-     * @param id
-     * @return 
-     */
-    public Carrinho getCarrinho(int id){
-        for(Carrinho c:carrinhos){
-            if(c.getId()==id){
-               return c;
-            }
-        }
-        return null;
     }
 }

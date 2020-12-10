@@ -5,6 +5,7 @@
  */
 package trabalhopoo;
 
+import Interface.JanelaMain;
 import java.util.Date;
 
 /**
@@ -22,9 +23,9 @@ public class TrabalhoPoo {
         tioze.addItem(d1);
         tioze.addPrateleira(new Prateleira(0));
         tioze.getPrateleira(0).addItem(d1);
-        tioze.addCarrinho(new Carrinho(0));
-        tioze.getCarrinho(0).addItem(d1);
-        System.out.println(tioze.getCarrinho(0).getItem(10).getMarca());
+        JanelaMain janela=new JanelaMain();
+        janela.show();
+        janela.setVisible(true);
     }
     
 }
