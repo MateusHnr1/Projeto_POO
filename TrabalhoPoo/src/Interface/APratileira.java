@@ -56,6 +56,11 @@ public class APratileira extends javax.swing.JFrame {
         });
 
         jButton3.setText("Colocaritens");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setText("RemoverItem");
 
@@ -123,6 +128,10 @@ public class APratileira extends javax.swing.JFrame {
         System.out.println(JanelaMain.MERCADINHO.getPrateleiras().size());
         UpdateList();
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
